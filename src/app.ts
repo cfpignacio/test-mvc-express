@@ -10,7 +10,13 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Ruta Home
 app.get('/', (req: Request, res: Response) => {
-	res.render('home');
+	res.render('home', {
+		titulo: 'Mi primer noticia',
+		subtitulo: 'Comenzando con mvc',
+		contenido: 'Configurando mi primer vista con express y mvc',
+		titulodepagina: 'MVC - TEST',
+		numero: 0,
+	});
 });
 
 app.listen(port, () => {
